@@ -8,10 +8,10 @@ node(){
     
     if("${BRANCH_NAME}"=="master")
        {
-    zip zipFile:"${BRANCH_NAME}.zip",glob:"**/*.cs"
+    zip zipFile:"a.zip"
   }
   else {
-  zip zipFile:"${BRANCH_NAME}.zip",glob:"**/*.js"
+  zip zipFile:"b.zip"
   }
   
   }
