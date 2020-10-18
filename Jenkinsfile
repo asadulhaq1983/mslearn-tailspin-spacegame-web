@@ -9,7 +9,7 @@ node(){
     def b="${BRANCH_NAME}"
     if(b=='master')
        {
-    zip zipFile:'a.zip', dir:'.'
+         zip zipFile:'Master'+${Build_Number}+'.zip', dir:'.'
   }
   else {
   zip zipFile:"b.zip"
