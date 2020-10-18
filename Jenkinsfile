@@ -5,8 +5,8 @@ node(){
   echo "${WORKSPACE}"
   echo "${BRANCH_NAME}"
   stage("Zipping"){
-    
-    if("${BRANCH_NAME}"=="master")
+    def b="${BRANCH_NAME}"
+    if(b=='master')
        {
     zip zipFile:"a.zip"
   }
