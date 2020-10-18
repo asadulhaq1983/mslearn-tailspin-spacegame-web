@@ -6,7 +6,7 @@ node(){
   echo "${BRANCH_NAME}"
   stage("Zipping"){
     
-    if("${BRANCH_NAME}".contentEquals("master"))
+    if("${BRANCH_NAME}"=="master")
        {
     zip zipFile:"${BRANCH_NAME}.zip",glob:"**/*.cs"
   }
