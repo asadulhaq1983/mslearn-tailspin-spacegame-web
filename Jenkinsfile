@@ -3,6 +3,7 @@ node(){
    checkout scm
   }
   echo "${WORKSPACE}"
+  echo "${BRANCH_NAME}"
   stage("Zipping"){
     
     if("${BRANCH_NAME}".contentEquals("master"))
