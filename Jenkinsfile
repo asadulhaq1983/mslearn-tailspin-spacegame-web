@@ -8,7 +8,7 @@ node(){
     //def b="${BRANCH_NAME}"
     //if(b=='master')
       // {
-    zip zipFile:"a.zip"
+    zip zipFile:'a.zip'
   //}
   //else {
   //zip zipFile:"b.zip"
