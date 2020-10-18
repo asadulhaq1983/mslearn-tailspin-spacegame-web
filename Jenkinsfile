@@ -2,6 +2,7 @@ node(){
   stage("Checking Out Repo") {
    checkout scm
   }
+  echo "${Build_Number}"
   echo "${WORKSPACE}"
   echo "${BRANCH_NAME}"
   stage("Zipping"){
