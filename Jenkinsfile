@@ -12,7 +12,7 @@ node(){
          zip zipFile:'Master'+${Build_Number}+'.zip', dir:'.'
   }
   else {
-  zip zipFile:"b.zip"
+    zip zipFile:b+"_"+"${BuildNumber}"+.zip
   }
   
   }
