@@ -5,14 +5,14 @@ node(){
   echo "${WORKSPACE}"
   echo "${BRANCH_NAME}"
   stage("Zipping"){
-    def b="${BRANCH_NAME}"
-    if(b=='master')
-       {
+    //def b="${BRANCH_NAME}"
+    //if(b=='master')
+      // {
     zip zipFile:"a.zip"
-  }
-  else {
-  zip zipFile:"b.zip"
-  }
+  //}
+  //else {
+  //zip zipFile:"b.zip"
+  //}
   
   }
 }
