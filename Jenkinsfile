@@ -1,8 +1,8 @@
-
 node(){
   stage("Checking Out Repo") {
-    checkout scm
+   checkout scm
   }
+  echo ${WORKSPACE}
   stage("Zipping"){
     
     if("${BRANCH_NAME}".contentEquals("master"))
