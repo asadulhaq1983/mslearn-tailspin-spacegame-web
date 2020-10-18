@@ -3,16 +3,19 @@ node(){
    checkout scm
   }
   echo "${Build_Number}"
+  def buildNo="${Build_Number}"
   echo "${WORKSPACE}"
   echo "${BRANCH_NAME}"
+  def branchName="${BRANCH_NAME}"
+  
   stage("Zipping"){
-    def b="${BRANCH_NAME}"
-    if(b=='master')
+    
+    if(branchName=='master')
        {
-         zip zipFile:'Master_'+${Build_Number}+'.zip', dir:'.'
+         zip zipFile:'Master_'+buildNo+'.zip', dir:'.'
   }
   else {
-    zip zipFile:b+'_'+${BuildNumber}+'.zip'
+    zip zipFile:branchName+'_'+buildNo+'.zip'
   }
   
   }
