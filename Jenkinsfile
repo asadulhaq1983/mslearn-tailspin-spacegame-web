@@ -8,15 +8,10 @@ node(){
   echo "${BRANCH_NAME}"
   def branchName="${BRANCH_NAME}"
   
-  stage("Zipping"){
-    
-    if(branchName=='master')
-       {
-         zip zipFile:'Master_'+buildNo+'.zip', dir:'.'
-  }
-  else {
-    zip zipFile:branchName+'_'+buildNo+'.zip'
-  }
+  def msbuildPath =  tool name: 'MSBuild', type: 'msbuild'
+  def msbuild = "${msbuildPath}\\MSBuild.exe"
+  
+  
+
   
   }
-}
