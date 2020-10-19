@@ -1,4 +1,4 @@
-node(){
+node('windowsAgent'){
   stage("Checking Out Repo") {
    checkout scm
   }
