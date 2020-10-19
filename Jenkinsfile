@@ -11,7 +11,7 @@ node(){
   def msbuildPath =  tool name: 'MSBuild', type: 'msbuild'
   def msbuild = "${msbuildPath}\\MSBuild.exe"
   
+  bat "${msbuild} Tailspin.SpaceGame.Web.sln"
   
-
-  
+    
   }
