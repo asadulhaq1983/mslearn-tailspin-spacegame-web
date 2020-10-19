@@ -9,7 +9,7 @@ node('windowsAgent'){
   def branchName="${BRANCH_NAME}"
   
   def msbuildPath =  tool name: 'MSBuild', type: 'msbuild'
-  def msbuild = "${msbuildPath}\\MSBuild.exe"
+  def msbuild = "\"${msbuildPath}\\MSBuild.exe\""
   
   bat "${msbuild} Tailspin.SpaceGame.Web.sln"
   
